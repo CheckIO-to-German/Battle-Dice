@@ -10,7 +10,7 @@
 <p>
     Sowie eine Schlacht beginnt, würfelt jeder Spieler einmal pro Einheit.
     Jeder Würfel hat eine Anzahl von Angriffs- und Verteidigungszeichen auf jeder Seite.
-    Nach einem Wurf, zieht man die Anzahl gewürfelter Verteidigunszeichen von den gegnerischen Angriffszeichen ab, und hat
+    Nach jeder Runde, zieht man die Anzahl gewürfelter Verteidigunszeichen von den gegnerischen Angriffszeichen ab, und hat
     bei einem positven Ergebnis entsprechend viele Einheiten verloren.
     Würfelt ein Spieler zum Beispiel 2 Angriffe und 4 Verteidigungen, sein Gegner 3 Angriffe und 1 Verteidigung, 
     hat er keine Verluste (3 - 4) und sein Gegner würde 1 Einheit verlieren (2 - 1).
@@ -31,13 +31,13 @@
     und zwei leeren Seiten.
 </p>
 <p>
-    Du musst die Wahrscheinlichkeit für Spieler Eins berechnen den Konflikt zu gewinnen.
+    Du musst die Wahrscheinlichkeit für einen Sieg von Spieler Eins berechnen.
     Wenn Spieler Eins eine 1 zu 7 Chance zu gewinnen hat, gibst Du den Wert &asymp;0.1429 zurück.
     Das Ergebnis sollte also auf vier Nachkommastellen, &plusmn;0.0001, gerundet sein.
 </p>
 
 <p>
-    <strong>Eingabe:</strong> Drei Argumente. Eine Beschreibung des Würfels als eine Liste von Strings. Die Anzahl Einheiten
+    <strong>Eingabe:</strong> Drei Argumente. Eine Beschreibung des Würfels als eine Liste von Strings. Die Anzahl der Einheiten
     von Spieler Eins und Zwei als Integer.
 </p>
 <p>
@@ -46,7 +46,7 @@
 </p>
 
 <p>
-    <strong>Beispiel:</strong>
+    <strong>Beispiele:</strong>
 </p>
 <pre class="brush: python">
 battle_probability(['A', 'D'], 3, 3) == 0.0000 # Jeder Spieler verliert immer dieselbe Anzahl Einheiten.
@@ -58,7 +58,7 @@ battle_probability(['AA', 'A', 'D', 'DD'], 5, 4) == 0.9073
 
 <p class="for_info_only">
     <strong>Wozu das gut ist:</strong>
-    Dieser Art mehrstufigen Wahrscheinlichkeitsberechnungen sind beliebt in Programmierwettkämpfen und Wahrscheinlichkeits-Lehrbüchern.
+    Diese Art mehrstufiger Wahrscheinlichkeitsberechnungen ist beliebt in Programmierwettkämpfen und Wahrscheinlichkeitslehrbüchern.
 </p>
 
 <p>
@@ -66,6 +66,6 @@ battle_probability(['AA', 'A', 'D', 'DD'], 5, 4) == 0.9073
     1 &le; <strong>units_one</strong> &le; 10<br/>
     1 &le; <strong>units_two</strong> &le; 10<br/>
     2 &le; len(<strong>dice_description</strong>) &le; 10<br/>
-    Es hat mindestens einen Angriff auf einem ganzen Würfel <br/>
+    Es gibt mindestens einen Angriff auf einem Würfel.<br/>
     Auf einer Seite sind höchstens drei Zeichen.
 </p>
